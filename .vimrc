@@ -42,7 +42,6 @@ inoremap (  ()<ESC>hli
 inoremap [  []<ESC>hli
 inoremap {  {}<ESC>hli
 
-
 " Spell checking
 " ==> Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
@@ -54,7 +53,3 @@ filetype off            " Helps force plugins to load correctly when it is turne
 
 " Add Vim native plugin support
 packloadall             " turn on Vim native plugin support
-
-" Swift plugin
-map <C-I> :pyf ~/.vim/plugin/swift-format.py
-imap <C-I> <c-o>:pyf ~/.vim/plugin/swift-format.py

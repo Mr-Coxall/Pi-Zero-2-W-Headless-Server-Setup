@@ -26,7 +26,7 @@ SSH into Pi using: ssh pi@raspberrypi.local
 
 Then download this repo using wget:
 ```
-wget https://github.com/Mr-Coxall/Pi-Zero-2-W-Headless-Server-Setup
+curl -LkSs https://api.github.com/repos/mr-coxall/Pi-Zero-2-W-Headless-Server-Setup/tarball -o Pi-Zer-Setup.tar.gz
 ```
 The CD into this directory.
 

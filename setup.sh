@@ -2,7 +2,6 @@
 
 # you will need to change permissions on the file before you can run it
 # chmod +x ./load.sh
-
 # update and upgrade system
 echo Update and upgrade system
 sudo apt-get update -y

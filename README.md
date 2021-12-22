@@ -23,3 +23,15 @@ network={
 Connect Pi to computer using USB cable. Wait for it to boot up completely, at least 1 minute.
 
 SSH into Pi using: ssh pi@raspberrypi.local
+
+Then download this repo using wget:
+```
+wget https://github.com/Mr-Coxall/Pi-Zero-2-W-Headless-Server-Setup
+```
+The CD into this directory.
+
+Change execution permissions on setup.sh
+```
+chmod +x ./setup
+```
+Then sun ./setup

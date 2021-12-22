@@ -8,6 +8,9 @@ echo Update and upgrade system
 sudo apt-get update -y
 sudo apt-get dist-upgrade -y
 
+# load git
+sudo apt install -y git
+
 # load .bashrc file and make it active
 echo Load .bashrc file
 > ~/.bashrc

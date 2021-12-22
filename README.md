@@ -28,6 +28,9 @@ Then download and un-tar this repo:
 ```
 curl -LkSs https://api.github.com/repos/mr-coxall/Pi-Zero-2-W-Headless-Server-Setup/tarball -o Pi-Zer-Setup.tar.gz
 tar -xvzf Pi-Zer-Setup.tar.gz
+rm Pi-Zer-Setup.tar.gz
+chmod +x ./Pi-Zero-2-W-Headless-Server-Setup/setup.sh
+./Pi-Zero-2-W-Headless-Server-Setup/setup.sh
 ```
 The CD into this directory.
 

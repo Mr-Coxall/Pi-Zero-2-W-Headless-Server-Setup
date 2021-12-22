@@ -20,3 +20,6 @@ network={
   psk="your_wifi_password"
 }
 ```
+Connect Pi to computer using USB cable. Wait for it to boot up completely, at least 1 minute.
+
+SSH into Pi using: ssh pi@raspberrypi.local

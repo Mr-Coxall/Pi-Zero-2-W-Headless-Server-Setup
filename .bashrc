@@ -23,8 +23,9 @@ else
 fi
 
 PS1="
-\[\e[34;1m\]┌──[\[\e[39;1m\]\w\[\e[34;1m\]]$PS1
-\[\e[34;1m\]└─:\[\e[0m\]"
+\[\e[34;1m\]┌─[\h@\u]
+\[\e[34;1m\]├─[\[\e[39;1m\]\w\[\e[34;1m\]]$PS1
+\[\e[34;1m\]└:\[\e[0m\]"
 
 # Display running command in GNU Screen window status
 #
@@ -40,3 +41,8 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet

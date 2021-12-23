@@ -10,6 +10,12 @@ sudo apt-get dist-upgrade -y
 # load git
 sudo apt install -y git
 
+# load ZRAM tools
+sudo apt install -y zram-tools
+
+# load NeoFetch
+sudo apt install -y neofetch
+
 # load .bashrc file and make it active
 echo Load .bashrc file
 > ~/.bashrc
@@ -65,10 +71,12 @@ cp ./mr-coxall_checks.xml ~/scripts/
 
 # install python linter
 pip3 install black
+# add path ?????
 
 # install C++
 # sudo apt install -y g++ - already installed on Pi
 pip3 install cpplint
+# add path ?????
 # echo '# for CPPLint' >> ~/.bashrc
 # echo 'export PATH="${PATH}":/home/ubuntu/.local/bin' >> ~/.bashrc
 

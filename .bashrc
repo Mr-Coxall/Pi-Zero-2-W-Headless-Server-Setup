@@ -27,15 +27,6 @@ PS1="
 \[\e[34;1m\]├─[\[\e[39;1m\]\w\[\e[34;1m\]]$PS1
 \[\e[34;1m\]└:\[\e[0m\]"
 
-# Display running command in GNU Screen window status
-#
-# In .screenrc, set: shelltitle "( |~"
-#
-# See: http://aperiodic.net/screen/title_examples#setting_the_title_to_the_name_of_the_running_program
-case $TERM in screen*)
-  PS1=${PS1}'\[\033k\033\\\]'
-esac
-
 PROMPT_DIRTRIM=1
 alias ls='ls --color=auto'
 alias ll='ls -alF'

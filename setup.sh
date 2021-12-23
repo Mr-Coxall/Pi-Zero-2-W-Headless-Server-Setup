@@ -30,7 +30,7 @@ cp ./.gitconfig ~/.gitconfig
 
 # copy over shell script file
 echo Load shell script files
-# mkdir ~/scripts
+mkdir ~/scripts
 # cp ./repo.sh ~/scripts/repo.sh
 # chmod +x ~/scripts/repo.sh
 # cp ./git-push.sh ~/scripts/git-push.sh

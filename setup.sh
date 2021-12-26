@@ -95,12 +95,12 @@ npm install prompt-sync # note: not global flag - does not work with it!
 # npm install -g eslint
 # npm install -g eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
-# load C#
-echo load C#
-curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
-echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
-echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
-source ~/.bashrc
+# load C# Microsoft Version
+# echo load C#
+# curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
+# echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
+# echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
+# source ~/.bashrc
 
 # Mono Developement
 echo load Mono Developement
@@ -109,7 +109,7 @@ sudo apt install -y apt-transport-https
 echo "deb https://download.mono-project.com/repo/debian vs-raspbianjessie main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
 sudo apt update
 sudo apt-get install -y monodevelop
-csc --version
+msc --version
 
 # load GitHub CLI
 echo load GitHub CLI

@@ -23,12 +23,13 @@ network={
 
 For overclocking try:
 ```
-arm_freq=1024
+arm_freq=1200
 core_freq=610
 sdram_freq=610
 overvoltage=6
 over_voltage_sdram=4
 gpu_mem=16
+force_turbo=1
 ```
 Connect Pi to computer using USB cable. Wait for it to boot up completely, at least 1 minute.
 

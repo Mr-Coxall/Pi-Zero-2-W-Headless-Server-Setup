@@ -25,6 +25,18 @@ cp ./.bashrc ~/.bashrc
 echo Load programs
 sudo apt-get -y install python3-pip
 
+# get updated version of Clang
+# https://solarianprogrammer.com/2018/04/22/raspberry-pi-raspbian-install-clang-compile-cpp-17-programs/
+wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+tar -xvf clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+mv clang+llvm-9.0.0-armv7a-linux-gnueabihf clang_9.0.0
+rm clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+sudo mv clang_9.0.0 /usr/local
+echo 'export PATH=/usr/local/clang_9.0.0/bin:$PATH' >> .bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> .bashrc
+source ~/.bashrc
+clang++ --version
+
 # load vim & .vimrc file
 sudo apt install -y vim
 echo Load .vimrc file

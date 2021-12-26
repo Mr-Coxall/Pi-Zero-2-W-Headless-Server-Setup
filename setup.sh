@@ -25,18 +25,6 @@ cp ./.bashrc ~/.bashrc
 echo Load programs
 sudo apt-get -y install python3-pip
 
-# get updated version of Clang
-# https://solarianprogrammer.com/2018/04/22/raspberry-pi-raspbian-install-clang-compile-cpp-17-programs/
-wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-tar -xvf clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-mv clang+llvm-9.0.0-armv7a-linux-gnueabihf clang_9.0.0
-rm clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-sudo mv clang_9.0.0 /usr/local
-echo 'export PATH=/usr/local/clang_9.0.0/bin:$PATH' >> .bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> .bashrc
-source ~/.bashrc
-clang++ --version
-
 # load vim & .vimrc file
 sudo apt install -y vim
 echo Load .vimrc file
@@ -103,7 +91,7 @@ nvm install node
 npm install -g typescript
 npm install -g ts-node
 npm install prompt-sync # note: not global flag - does not work with it!
-# isntall EsLint
+# install EsLint
 # npm install -g eslint
 # npm install -g eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
@@ -134,6 +122,29 @@ ssh-keygen -t ed25519 -C "mr.coxall@mths.ca"
 eval "$(ssh-agent -s)"
 # then copy public key over to GitHub SSH keys
 cat ~/.ssh/id_ed25519.pub
+
+# Vim YouCompleteMe plugin
+# need some stuff first
+sudo apt install -y build-essential cmake vim-nox python3-dev
+# get updated version of Clang
+# https://solarianprogrammer.com/2018/04/22/raspberry-pi-raspbian-install-clang-compile-cpp-17-programs/
+wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+tar -xvf clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+rm clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+mv clang+llvm-9.0.0-armv7a-linux-gnueabihf clang_9.0.0
+sudo mv clang_9.0.0 /usr/local
+echo 'export PATH=/usr/local/clang_9.0.0/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+source ~/.bashrc
+clang++ --version
+# install dev software, so you can use "all" tag
+# apt install -y mono-complete golang
+# https://vi.stackexchange.com/questions/13529/is-there-a-way-to-install-youcompleteme-plugin-using-vim-8-0-default-plugin-mana
+mkdir -p ~/.vim/pack/plugins/start
+git clone https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/start/YouCompleteMe
+cd ~/.vim/pack/plugins/start/YouCompleteMe && git submodule update --init --recursive && ./install.py --java-completer --ts-completer
+
+
 
 # then remove the dot_files directory 
 # sudo rm -R ~/AWS-Ubuntu-Setup-Script

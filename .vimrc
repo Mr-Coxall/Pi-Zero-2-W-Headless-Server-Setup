@@ -51,5 +51,8 @@ set background=dark     " configure Vim to use brighter colors
 set autoread            " autoreload the file in Vim if it has been changed outside of Vim
 filetype off            " Helps force plugins to load correctly when it is turned back on below
 "
+"Omni complete turned on
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 " Add Vim native plugin support
 packloadall             " turn on Vim native plugin support

@@ -142,7 +142,7 @@ clang++ --version
 # https://vi.stackexchange.com/questions/13529/is-there-a-way-to-install-youcompleteme-plugin-using-vim-8-0-default-plugin-mana
 mkdir -p ~/.vim/pack/plugins/start
 git clone https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/start/YouCompleteMe
-cd ~/.vim/pack/plugins/start/YouCompleteMe && git submodule update --init --recursive && ./install.py --java-completer --ts-completer
+cd ~/.vim/pack/plugins/start/YouCompleteMe && git submodule update --init --recursive && ./install.py --java-completer --ts-completer --clangd-completer
 
 
 

@@ -2,7 +2,7 @@
 
 This repo describes how to setup the Pi to be a headless development server.
 
-Download and burn the latest Lite iso using the Raspberry Pi imager: https://www.raspberrypi.com/software/
+Download and burn the latest Lite iso using the Raspberry Pi imager: https://www.raspberrypi.com/software/operating-systems
 
 Before booting the Pi, change the following files:
 - create an empty file at the root of boot called: ssh

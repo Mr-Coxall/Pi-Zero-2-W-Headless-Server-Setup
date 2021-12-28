@@ -53,6 +53,7 @@ sudo pip3 install --upgrade requests
 sudo apt install vim-youcompleteme -y
 vim-addon-manager install youcompleteme
 
+
 # load java programming software
 echo load Java
 sudo apt install default-jdk -y
@@ -64,6 +65,7 @@ wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.44/
 cp ./checkstyle-8.44-all.jar ~/scripts/checkstyle.jar
 wget https://raw.githubusercontent.com/Mr-Coxall/dot_files/main/mr-coxall_checks.xml
 cp ./mr-coxall_checks.xml ~/scripts/
+
 
 # you might need to get a newer version of swift
 # https://swift.org/download/
@@ -99,17 +101,17 @@ cp -r ./swift/utils/vim ~/.vim/pack/bundle/start/swift
 # echo "--- Cleaning up, removing swift repo.."
 # rm -rf ./swift/
 
+# python3 already installed
 # install python linter
 pip3 install black
 
-# install C++
+
+# C++ already installed
 # sudo apt install -y g++ - already installed on Pi
 pip3 install cpplint
-# add path ?????
-# echo '# for CPPLint' >> ~/.bashrc
-# echo 'export PATH="${PATH}":/home/ubuntu/.local/bin' >> ~/.bashrc
 
-# Node.js
+
+# Node.js update, it is installed
 # you might need to upgrade tp newer version: https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 echo "Confirm NVM is loaded"
@@ -124,23 +126,12 @@ npm install prompt-sync # note: not global flag - does not work with it!
 # npm install -g eslint
 # npm install -g eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
-# load C# Microsoft Version
-# echo load C#
-# curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
-# echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
-# echo 'export PATH=$PATH:$HOME/.dotnet' >> ~/.bashrc
-# source ~/.bashrc
 
 # Mono Developement
 echo load Mono Developement
 sudo apt install -y mono-complete
 # how to use: mono-csc helloWorld.cs;  mono helloWorld.exe
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-# sudo apt install -y apt-transport-https
-# echo "deb https://download.mono-project.com/repo/debian vs-raspbianjessie main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
-# sudo apt update
-# sudo apt-get install -y monodevelop
-# msc --version
+
 
 # load GitHub CLI
 echo load GitHub CLI

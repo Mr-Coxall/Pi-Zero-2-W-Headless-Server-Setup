@@ -37,21 +37,21 @@ cp ./.gitconfig ~/.gitconfig
 # copy over shell script file
 echo Load shell script files
 mkdir ~/scripts
-# cp ./repo.sh ~/scripts/repo.sh
-# chmod +x ~/scripts/repo.sh
-# cp ./git-push.sh ~/scripts/git-push.sh
-# chmod +x ~/scripts/git-push.sh
-# cp ./java-lint.sh ~/scripts/java-lint.sh
-# chmod +x ~/scripts/java-lint.sh
-# cp ./main.yml ~/scripts/main.yml
-# cp ./swift.yml ~/scripts/swift.yml
+cp ./repo.sh ~/scripts/repo.sh
+chmod +x ~/scripts/repo.sh
+cp ./git-push.sh ~/scripts/git-push.sh
+chmod +x ~/scripts/git-push.sh
+cp ./java-lint.sh ~/scripts/java-lint.sh
+chmod +x ~/scripts/java-lint.sh
+cp ./main.yml ~/scripts/main.yml
+cp ./swift.yml ~/scripts/swift.yml
 
 # load YouCompleteMe
 echo Load YouCompleteMe plugin for Vim
 # need to do an upgrade to python libraries first
-# sudo pip3 install --upgrade requests
-# sudo apt install vim-youcompleteme -y
-# vim-addon-manager install youcompleteme
+sudo pip3 install --upgrade requests
+sudo apt install vim-youcompleteme -y
+vim-addon-manager install youcompleteme
 
 # load java programming software
 echo load Java
@@ -71,7 +71,6 @@ cp ./mr-coxall_checks.xml ~/scripts/
 
 # install python linter
 pip3 install black
-# add path ?????
 
 # install C++
 # sudo apt install -y g++ - already installed on Pi
@@ -104,12 +103,13 @@ npm install prompt-sync # note: not global flag - does not work with it!
 
 # Mono Developement
 echo load Mono Developement
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-sudo apt install -y apt-transport-https
-echo "deb https://download.mono-project.com/repo/debian vs-raspbianjessie main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
-sudo apt update
-sudo apt-get install -y monodevelop
-msc --version
+sudo apt install -y mono-complete
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+# sudo apt install -y apt-transport-https
+# echo "deb https://download.mono-project.com/repo/debian vs-raspbianjessie main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
+# sudo apt update
+# sudo apt-get install -y monodevelop
+# msc --version
 
 # load GitHub CLI
 echo load GitHub CLI
@@ -125,24 +125,24 @@ cat ~/.ssh/id_ed25519.pub
 
 # Vim YouCompleteMe plugin
 # need some stuff first
-sudo apt install -y build-essential cmake vim-nox python3-dev
+# sudo apt install -y build-essential cmake vim-nox python3-dev
 # get updated version of Clang
 # https://solarianprogrammer.com/2018/04/22/raspberry-pi-raspbian-install-clang-compile-cpp-17-programs/
-wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-tar -xvf clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-rm clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
-mv clang+llvm-9.0.0-armv7a-linux-gnueabihf clang_9.0.0
-sudo mv clang_9.0.0 /usr/local
-echo 'export PATH=/usr/local/clang_9.0.0/bin:$PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
-source ~/.bashrc
-clang++ --version
+# wget http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+# tar -xvf clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+# rm clang+llvm-9.0.0-armv7a-linux-gnueabihf.tar.xz
+# mv clang+llvm-9.0.0-armv7a-linux-gnueabihf clang_9.0.0
+# sudo mv clang_9.0.0 /usr/local
+# echo 'export PATH=/usr/local/clang_9.0.0/bin:$PATH' >> ~/.bashrc
+# echo 'export LD_LIBRARY_PATH=/usr/local/clang_9.0.0/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+# source ~/.bashrc
+# clang++ --version
 # install dev software, so you can use "all" tag
 # apt install -y mono-complete golang
 # https://vi.stackexchange.com/questions/13529/is-there-a-way-to-install-youcompleteme-plugin-using-vim-8-0-default-plugin-mana
-mkdir -p ~/.vim/pack/plugins/start
-git clone https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/start/YouCompleteMe
-cd ~/.vim/pack/plugins/start/YouCompleteMe && git submodule update --init --recursive && ./install.py --java-completer --ts-completer --clangd-completer
+# mkdir -p ~/.vim/pack/plugins/start
+# git clone https://github.com/Valloric/YouCompleteMe ~/.vim/pack/plugins/start/YouCompleteMe
+# cd ~/.vim/pack/plugins/start/YouCompleteMe && git submodule update --init --recursive && ./install.py --java-completer --ts-completer --clangd-completer
 
 
 

@@ -52,7 +52,7 @@ set autoread            " autoreload the file in Vim if it has been changed outs
 filetype off            " Helps force plugins to load correctly when it is turned back on below
 "
 "Omni complete turned on
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
+" ---> filetype plugin on
+" ---> set omnifunc=syntaxcomplete#Complete
 " Add Vim native plugin support
 packloadall             " turn on Vim native plugin support

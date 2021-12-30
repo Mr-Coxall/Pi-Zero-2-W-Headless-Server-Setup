@@ -68,7 +68,7 @@ cp ./mr-coxall_checks.xml ~/scripts/
 
 
 # you might need to get a newer version of swift
-
+# Swift does not run on 32-bit OS
 
 # python3 already installed
 # install python linter

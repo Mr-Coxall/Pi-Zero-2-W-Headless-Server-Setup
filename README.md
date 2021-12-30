@@ -24,10 +24,7 @@ network={
 For overclocking try:
 ```
 arm_freq=1200
-core_freq=610
-sdram_freq=610
 overvoltage=6
-over_voltage_sdram=4
 gpu_mem=16
 force_turbo=1
 ```
@@ -37,10 +34,10 @@ SSH into Pi using: ssh pi@raspberrypi.local
 
 Then download and un-tar this repo:
 ```
-curl -LkSs https://api.github.com/repos/mr-coxall/Pi-Zero-2-W-Headless-Server-Setup/tarball -o Pi-Zer-Setup.tar.gz
-tar -xvzf Pi-Zer-Setup.tar.gz
-rm Pi-Zer-Setup.tar.gz
-cd Mr
+wget https://github.com/mr-coxall/Pi-Zero-2-W-Headless-Server-Setup/archive/main.zip
+unzip ./main.zip
+rm ./main.zip
+cd Pi-Zero-2-W-Headless-Server-Setup-main
 chmod +x ./setup.sh
 ./setup.sh
 ```

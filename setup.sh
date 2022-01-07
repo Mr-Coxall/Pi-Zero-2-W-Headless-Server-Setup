@@ -50,8 +50,8 @@ cp ./swift.yml ~/scripts/swift.yml
 echo Load YouCompleteMe plugin for Vim
 # need to do an upgrade to python libraries first
 sudo pip3 install --upgrade requests
-sudo apt install vim-youcompleteme -y
-vim-addon-manager install youcompleteme
+# sudo apt install vim-youcompleteme -y
+# vim-addon-manager install youcompleteme
 
 
 # load java programming software

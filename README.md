@@ -3,6 +3,7 @@
 This repo describes how to setup the Pi to be a headless development server.
 
 Download and burn the latest Lite iso using the Raspberry Pi imager: https://www.raspberrypi.com/software/operating-systems
+
 Download the 64-bit OS here: https://downloads.raspberrypi.org/raspios_lite_arm64/images/
 
 Before booting the Pi, change the following files:

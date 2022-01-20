@@ -7,7 +7,7 @@ Download the 64-bit OS here: https://downloads.raspberrypi.org/raspios_lite_arm6
 
 Before booting the Pi, change the following files:
 - create an empty file at the root of boot called: ssh
-- add "dtoverlay=dwc2" to the end of: config.txt
+- add "dtoverlay=dwc2,dr_mode=peripheral" to the end of: config.txt
 - add "modules-load=dwc2,g_ether" right after rootwait in: cmdline.txt
 - add file called "wpa_supplicant.conf" and add:
 ```

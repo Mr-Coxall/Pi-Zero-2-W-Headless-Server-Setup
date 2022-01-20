@@ -23,7 +23,7 @@ else
 fi
 
 PS1="
-\[\e[34;1m\]┌─[`vcgencmd measure_temp | cut -d = -f 2` -> \h@\u]
+\[\e[34;1m\]┌─[`vcgencmd measure_temp | cut -d = -f 2` -> \u@\h]
 \[\e[34;1m\]├─[\[\e[39;1m\]\w\[\e[34;1m\]]$PS1
 \[\e[34;1m\]└:\[\e[0m\]"
 

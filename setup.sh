@@ -7,6 +7,9 @@ echo Update and upgrade system
 sudo apt-get update -y
 sudo apt-get dist-upgrade -y
 
+# load the Micro text editor
+sudo apt install -y micro
+
 # load git
 sudo apt install -y git
 

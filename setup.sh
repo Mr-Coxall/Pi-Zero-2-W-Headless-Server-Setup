@@ -8,7 +8,7 @@ sudo apt-get update -y
 sudo apt-get dist-upgrade -y
 
 # load the Micro text editor
-sudo apt install -y micro
+# sudo apt install -y micro
 
 # load git
 sudo apt install -y git
@@ -38,36 +38,36 @@ cp ./.vimrc ~/.vimrc
 cp ./.gitconfig ~/.gitconfig
 
 # copy over shell script file
-echo Load shell script files
-mkdir ~/scripts
-cp ./repo.sh ~/scripts/repo.sh
-chmod +x ~/scripts/repo.sh
-cp ./git-push.sh ~/scripts/git-push.sh
-chmod +x ~/scripts/git-push.sh
-cp ./java-lint.sh ~/scripts/java-lint.sh
-chmod +x ~/scripts/java-lint.sh
-cp ./main.yml ~/scripts/main.yml
-cp ./swift.yml ~/scripts/swift.yml
+# echo Load shell script files
+# mkdir ~/scripts
+# cp ./repo.sh ~/scripts/repo.sh
+# chmod +x ~/scripts/repo.sh
+# cp ./git-push.sh ~/scripts/git-push.sh
+# chmod +x ~/scripts/git-push.sh
+# cp ./java-lint.sh ~/scripts/java-lint.sh
+# chmod +x ~/scripts/java-lint.sh
+# cp ./main.yml ~/scripts/main.yml
+# cp ./swift.yml ~/scripts/swift.yml
 
 # load YouCompleteMe
-echo Load YouCompleteMe plugin for Vim
+# echo Load YouCompleteMe plugin for Vim
 # need to do an upgrade to python libraries first
-sudo pip3 install --upgrade requests
+# sudo pip3 install --upgrade requests
 # sudo apt install vim-youcompleteme -y
 # vim-addon-manager install youcompleteme
 
 
 # load java programming software
-echo load Java
-sudo apt install default-jdk -y
+# echo load Java
+# sudo apt install default-jdk -y
 
 # loading checkstyle for java
 # https://github.com/checkstyle/checkstyle/releases
-echo load CheckStyle for Java
-wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.44/checkstyle-8.44-all.jar
-cp ./checkstyle-8.44-all.jar ~/scripts/checkstyle.jar
-wget https://raw.githubusercontent.com/Mr-Coxall/dot_files/main/mr-coxall_checks.xml
-cp ./mr-coxall_checks.xml ~/scripts/
+# echo load CheckStyle for Java
+# wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-8.44/checkstyle-8.44-all.jar
+# cp ./checkstyle-8.44-all.jar ~/scripts/checkstyle.jar
+# wget https://raw.githubusercontent.com/Mr-Coxall/dot_files/main/mr-coxall_checks.xml
+# cp ./mr-coxall_checks.xml ~/scripts/
 
 
 # you might need to get a newer version of swift
@@ -75,33 +75,33 @@ cp ./mr-coxall_checks.xml ~/scripts/
 
 # python3 already installed
 # install python linter
-pip3 install black
+# pip3 install black
 
 
 # C++ already installed
 # sudo apt install -y g++ - already installed on Pi
-pip3 install cpplint
+# pip3 install cpplint
 
 
 # Node.js update, it is installed
 # you might need to upgrade tp newer version: https://github.com/nvm-sh/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-echo "Confirm NVM is loaded"
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# echo "Confirm NVM is loaded"
 # you will want to update the .bash_profile, so the .bashrc automatically is executed
-source ~/.bashrc
-command -v nvm
-nvm install node
-npm install -g typescript
-npm install -g ts-node
-npm install prompt-sync # note: not global flag - does not work with it!
+# source ~/.bashrc
+# command -v nvm
+# nvm install node
+# npm install -g typescript
+# npm install -g ts-node
+# npm install prompt-sync # note: not global flag - does not work with it!
 # install EsLint
 # npm install -g eslint
 # npm install -g eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 
 # Mono Developement
-echo load Mono Developement
-sudo apt install -y mono-complete
+# echo load Mono Developement
+# sudo apt install -y mono-complete
 # how to use: mono-csc helloWorld.cs;  mono helloWorld.exe
 
 

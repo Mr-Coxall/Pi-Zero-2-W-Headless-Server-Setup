@@ -106,16 +106,16 @@ cp ./.gitconfig ~/.gitconfig
 
 
 # load GitHub CLI
-echo load GitHub CLI
-GITHUB_CLI_VERSION=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
-curl -Lo gh.deb "https://github.com/cli/cli/releases/latest/download/gh_${GITHUB_CLI_VERSION}_linux_armv6.deb"
-sudo dpkg -i gh.deb
+# echo load GitHub CLI
+# GITHUB_CLI_VERSION=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+# curl -Lo gh.deb "https://github.com/cli/cli/releases/latest/download/gh_${GITHUB_CLI_VERSION}_linux_armv6.deb"
+# sudo dpkg -i gh.deb
 
 # provision GitHub
-ssh-keygen -t ed25519 -C "mr.coxall@mths.ca"
-eval "$(ssh-agent -s)"
+# ssh-keygen -t ed25519 -C "mr.coxall@mths.ca"
+# eval "$(ssh-agent -s)"
 # then copy public key over to GitHub SSH keys
-cat ~/.ssh/id_ed25519.pub
+# cat ~/.ssh/id_ed25519.pub
 
 # Vim YouCompleteMe plugin
 # need some stuff first
@@ -156,9 +156,9 @@ sudo reboot now
 # then copy public key over to GitHub SSH keys
 # cat ~/.ssh/id_ed25519.pub
 # to test it out
-ssh -T git@github.com
+# ssh -T git@github.com
 
 # configure GitHub CLI
-gh auth login
+# gh auth login
 # web method most likely the easiest
 # use existing GitHub SSH keys
